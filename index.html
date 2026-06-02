@@ -845,10 +845,10 @@
 
 <!-- NAV -->
 <nav>
-  <a href="#" class="nav-logo"><img src="images/img_001.png" alt="Planning and Visuals by TE-OH logo" class="nav-logo-img"/><span class="logo-full">Planning and Visuals by TE-OH</span><span class="logo-short">by TE-OH</span></a>
+  <a href="#" class="nav-logo" onclick="showPage('main'); return false;"><img src="images/img_001.png" alt="Planning and Visuals by TE-OH logo" class="nav-logo-img"/><span class="logo-full">Planning and Visuals by TE-OH</span><span class="logo-short">by TE-OH</span></a>
   <ul class="nav-links">
-    <li class="nav-desktop-only"><a href="#renders">Renders</a></li>
-    <li class="nav-desktop-only"><a href="#planning">Planning</a></li>
+    <li class="nav-desktop-only"><a href="#renders" onclick="showPage('main', 'renders'); return false;">Renders</a></li>
+    <li class="nav-desktop-only"><a href="#planning" onclick="showPage('main', 'planning'); return false;">Planning</a></li>
     <li><a href="#" onclick="showPage('other'); return false;">Other Services</a></li>
   </ul>
   <a href="#get-a-quote" class="nav-cta" onclick="showPage('main'); return false;" id="nav-cta-btn">Get a Quote</a>
@@ -1208,7 +1208,7 @@
 </div>
 
 <script>
-  function showPage(page) {
+  function showPage(page, scrollTo) {
     const main = document.getElementById('main-page');
     const other = document.getElementById('other-services-page');
     const cta = document.getElementById('nav-cta-btn');
@@ -1226,7 +1226,14 @@
       cta.textContent = 'Get a Quote';
       cta.onclick = null;
       cta.href = '#get-a-quote';
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      if (scrollTo) {
+        setTimeout(function() {
+          const target = document.getElementById(scrollTo);
+          if (target) target.scrollIntoView({ behavior: 'smooth' });
+        }, 50);
+      } else {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
     }
   }
 </script>
