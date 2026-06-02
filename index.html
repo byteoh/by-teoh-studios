@@ -938,11 +938,10 @@
   </div>
 
   <div class="inline-contact">
-    <form class="contact-form" action="https://formspree.io/f/xaqkzpbv" method="POST" enctype="multipart/form-data">
-      <input type="hidden" name="_subject" value="New enquiry from Planning and Visuals by TE-OH" />
+    <div class="contact-form" id="quote-form">
       <div class="form-group">
         <label for="email-inline">Email</label>
-        <input type="email" id="email-inline" name="email" placeholder="john@example.com" required />
+        <input type="email" id="email-inline" placeholder="john@example.com" required />
       </div>
       <div class="form-group">
         <label>Package</label>
@@ -963,15 +962,15 @@
       </div>
       <div class="form-group">
         <label for="message-inline">Message</label>
-        <textarea id="message-inline" name="message" placeholder="Your message..." rows="5" required></textarea>
+        <textarea id="message-inline" placeholder="Your message..." rows="5" required></textarea>
       </div>
       <div class="form-group">
-        <label for="attachment-inline">Attach Floor Plan Sketch <span class="optional">(optional)</span></label>
+        <label>Attach Floor Plan Sketch <span class="optional">(optional)</span></label>
         <label class="file-upload-label" for="attachment-inline">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
           <span id="file-label-inline">Attach files</span>
         </label>
-        <input type="file" id="attachment-inline" name="attachment" accept="image/*,.pdf" multiple style="display:none;" onchange="
+        <input type="file" id="attachment-inline" accept="image/*,.pdf" multiple style="display:none;" onchange="
           const files = this.files;
           if (files.length === 0) {
             document.getElementById('file-label-inline').textContent = 'Attach files';
@@ -981,22 +980,107 @@
           const totalMB = Array.from(files).reduce((sum, f) => sum + f.size, 0) / 1024 / 1024;
           document.getElementById('file-label-inline').textContent = files.length === 1 ? files[0].name : files.length + ' files selected';
           const warning = document.getElementById('file-size-warning');
-          if (totalMB > 5) {
-            warning.textContent = 'Total file size is ' + totalMB.toFixed(1) + 'MB — please keep attachments under 5MB total.';
+          if (totalMB > 10) {
+            warning.textContent = 'Total file size is ' + totalMB.toFixed(1) + 'MB — please keep attachments under 10MB total.';
             warning.style.color = '#c0392b';
             warning.style.display = 'block';
           } else {
-            warning.textContent = totalMB.toFixed(1) + 'MB of 5MB used.';
+            warning.textContent = totalMB.toFixed(1) + 'MB selected.';
             warning.style.color = 'var(--light)';
             warning.style.display = 'block';
           }
         " />
         <span id="file-size-warning" style="display:none; font-size:13px; margin-top:6px;"></span>
-        <span style="font-size:12px; color:var(--light); margin-top:4px; display:block;">Maximum 5MB total across all files.</span>
+        <span style="font-size:12px; color:var(--light); margin-top:4px; display:block;">Images or PDFs, max 10MB total.</span>
       </div>
-      <button type="submit" class="contact-btn">Send Message</button>
-    </form>
+      <div id="form-error" style="display:none; font-size:13px; color:#c0392b; margin-top:4px;"></div>
+      <button type="button" class="contact-btn" onclick="submitToGoogleForms()">Send Message</button>
+      <div id="form-success" style="display:none; text-align:center; padding:20px; background:#f0faf0; border-radius:12px; color:#2d7a2d; font-size:15px; font-weight:500;">
+        ✓ Message sent! I'll be in touch soon.
+      </div>
+    </div>
   </div>
+
+  <script>
+    function submitToGoogleForms() {
+      const email = document.getElementById('email-inline').value.trim();
+      const message = document.getElementById('message-inline').value.trim();
+      const packageVal = document.querySelector('input[name="package"]:checked');
+      const fileInput = document.getElementById('attachment-inline');
+      const errorEl = document.getElementById('form-error');
+      const successEl = document.getElementById('form-success');
+      const btn = document.querySelector('.contact-btn');
+
+      errorEl.style.display = 'none';
+
+      if (!email) {
+        errorEl.textContent = 'Please enter your email address.';
+        errorEl.style.display = 'block';
+        return;
+      }
+      if (!message) {
+        errorEl.textContent = 'Please enter a message.';
+        errorEl.style.display = 'block';
+        return;
+      }
+
+      btn.textContent = 'Sending…';
+      btn.disabled = true;
+
+      // Submit form data to Google Forms
+      const formData = new URLSearchParams();
+      formData.append('entry.431596474', email);
+      formData.append('entry.935675551', packageVal ? packageVal.value : 'Not selected');
+      formData.append('entry.1102191041', message);
+
+      const formSubmit = fetch('https://docs.google.com/forms/d/e/1FAIpQLSdGJEc56bTFyx37tbxQHN4gpWZR0WVoIIwc8c8cdJy7xyS0dg/formResponse', {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: formData.toString()
+      });
+
+      // If files selected, read and send to Google Drive
+      const files = fileInput.files;
+      let fileSubmit = Promise.resolve();
+
+      if (files.length > 0) {
+        const filePromises = Array.from(files).map(file => {
+          return new Promise((resolve, reject) => {
+            const reader = new FileReader();
+            reader.onload = function(e) {
+              resolve({
+                name: file.name,
+                type: file.type,
+                data: e.target.result.split(',')[1] // base64 only
+              });
+            };
+            reader.onerror = reject;
+            reader.readAsDataURL(file);
+          });
+        });
+
+        fileSubmit = Promise.all(filePromises).then(function(fileDataArray) {
+          return fetch('https://script.google.com/macros/s/AKfycbwiZedLiew7d0itLA0XZaVHoOlnZjs-3YptBQdZoFSJk6mGl4uoGmEQNonfNFPTNyP-vw/exec', {
+            method: 'POST',
+            mode: 'no-cors',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ files: fileDataArray, email: email })
+          });
+        });
+      }
+
+      Promise.all([formSubmit, fileSubmit]).then(function() {
+        document.getElementById('quote-form').style.display = 'none';
+        successEl.style.display = 'block';
+      }).catch(function() {
+        errorEl.textContent = 'Something went wrong. Please try emailing by.teoh.studios@gmail.com directly.';
+        errorEl.style.display = 'block';
+        btn.textContent = 'Send Message';
+        btn.disabled = false;
+      });
+    }
+  </script>
 </section>
 
 <div class="section-divider"></div>
