@@ -1,0 +1,1348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-62L5LYWR62"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-62L5LYWR62');
+</script>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Planning and Visuals Planning and Visuals by TE-OH, Garden Room Renders & Planning Permission Packs</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #f5f4f0;
+    --white: #ffffff;
+    --dark: #1a1a18;
+    --mid: #5a5a54;
+    --light: #9a9a90;
+    --accent: #1a1a18;
+    --radius: 16px;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg);
+    color: var(--dark);
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .logo-short { display: none; }
+
+  @media (max-width: 768px) {
+    .logo-full { display: none; }
+    .logo-short { display: inline; }
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(245,244,240,0.88);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    height: 60px;
+  }
+
+  .nav-logo-img {
+    height: 28px;
+    width: auto;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 8px;
+    border-radius: 6px;
+  }
+
+  .nav-logo {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: -0.02em;
+    color: var(--dark);
+    text-decoration: none;
+  }
+
+  .nav-logo sup {
+    font-size: 8px;
+    vertical-align: super;
+    opacity: 0.6;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+  }
+
+  .nav-links a {
+    text-decoration: none;
+    color: var(--dark);
+    font-size: 14px;
+    font-weight: 400;
+    opacity: 0.75;
+    transition: opacity 0.2s;
+  }
+  .nav-links a:hover { opacity: 1; }
+
+  .nav-cta {
+    background: var(--dark);
+    color: #fff !important;
+    padding: 10px 20px;
+    border-radius: 100px;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    opacity: 1 !important;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.15s;
+  }
+  .nav-cta:hover { background: #333; transform: translateY(-1px); }
+
+  /* ── HERO ── */
+  .hero {
+    text-align: center;
+    padding: 72px 24px 48px;
+  }
+
+  .hero h1 {
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(28px, 4vw, 44px);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+    color: var(--dark);
+    margin-bottom: 12px;
+  }
+
+  .hero .subheadline {
+    font-size: 19px;
+    color: var(--light);
+    font-weight: 500;
+    margin-bottom: 48px;
+  }
+
+  .hero-image-wrap {
+    max-width: 1100px;
+    margin: 0 auto 64px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 24px 64px rgba(0,0,0,0.12);
+  }
+
+  .hero-image-wrap img {
+    width: 100%;
+    display: block;
+  }
+
+  /* ── VALUE PROP ── */
+  .value-prop {
+    text-align: center;
+    padding: 0 24px 80px;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  .value-prop h2 {
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(20px, 2.5vw, 26px);
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 12px;
+    line-height: 1.2;
+  }
+
+  .value-prop p {
+    color: var(--light);
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 1.7;
+  }
+
+  /* ── RENDERS SECTION ── */
+  .section {
+    padding: 80px 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .section-label {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--light);
+    margin-bottom: 14px;
+  }
+
+  .section-title {
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(26px, 3.5vw, 40px);
+    font-weight: 800;
+    color: var(--dark);
+    letter-spacing: -0.03em;
+    margin-bottom: 8px;
+    line-height: 1.1;
+  }
+
+  .section-sub {
+    color: var(--light);
+    font-size: 17px;
+    font-weight: 500;
+    margin-bottom: 48px;
+    max-width: 460px;
+  }
+
+  /* ── TWO-UP RENDER IMAGES ── */
+  .render-two-up {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 4px;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: 0 16px 48px rgba(0,0,0,0.1);
+  }
+
+  .render-two-up img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+  }
+
+  /* ── PLANNING SECTION ── */
+  .planning-section {
+    background: var(--white);
+    border-radius: 24px;
+    margin: 0 32px;
+    padding: 64px 56px;
+  }
+
+  .planning-section .section-title { margin-bottom: 6px; }
+
+  .planning-drawing {
+    margin-top: 36px;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #f0eff0;
+    border: 1px solid rgba(0,0,0,0.06);
+  }
+
+  .planning-drawing img {
+    width: 100%;
+    max-height: 600px;
+    object-fit: contain;
+    display: block;
+  }
+
+  /* ── ELEVATIONS ── */
+  .elevations-wrap {
+    margin-top: 20px;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid rgba(0,0,0,0.08);
+  }
+
+  .elevations-wrap img {
+    width: 100%;
+    display: block;
+  }
+
+  /* ── HOW IT WORKS ── */
+  .how-section {
+    padding: 80px 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .how-section .section-title { margin-bottom: 10px; }
+  .how-section .section-sub { margin: 0 auto 52px; text-align: center; }
+
+  .steps-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    margin-bottom: 56px;
+  }
+
+  .step-card {
+    text-align: left;
+  }
+
+  .step-img-wrap {
+    position: relative;
+    border-radius: 14px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    background: #e8e7e3;
+    aspect-ratio: 16/10;
+  }
+
+  .step-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .step-number {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    background: white;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--dark);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  }
+
+  .step-card h3 {
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 8px;
+    letter-spacing: -0.02em;
+  }
+
+  .step-card p {
+    font-size: 14px;
+    color: var(--mid);
+    line-height: 1.65;
+  }
+
+  /* ── CTA BUTTON ── */
+  .cta-btn {
+    display: inline-block;
+    background: var(--dark);
+    color: #fff;
+    padding: 16px 36px;
+    border-radius: 100px;
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.15s;
+    letter-spacing: -0.01em;
+  }
+  .cta-btn:hover { background: #333; transform: translateY(-2px); }
+
+  .cta-caption {
+    margin-top: 16px;
+    font-size: 17px;
+    font-weight: 500;
+    color: var(--light);
+  }
+
+  /* ── PORTFOLIO GALLERY ── */
+  .gallery-section {
+    padding: 0 32px 80px;
+  }
+
+  .gallery-masonry {
+    columns: 3;
+    column-gap: 8px;
+  }
+
+  .gallery-cell {
+    break-inside: avoid;
+    margin-bottom: 8px;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .gallery-cell img {
+    width: 100%;
+    display: block;
+    transition: transform 0.4s ease;
+  }
+
+  .gallery-cell img:hover { transform: scale(1.02); }
+
+  /* ── MORE SERVICES CTA ── */
+  .more-services-section {
+    padding: 80px 40px;
+    background: var(--bg);
+  }
+
+  .more-services-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .more-services-preview {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+  }
+
+  .ms-preview-cell {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    cursor: pointer;
+    aspect-ratio: 3/4;
+    background: #e8e7e3;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .ms-preview-cell:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 40px rgba(0,0,0,0.14);
+  }
+
+  .ms-preview-cell img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+  }
+
+  .ms-preview-cell:hover img {
+    transform: scale(1.05);
+  }
+
+  .ms-preview-label {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.65) 0%, transparent 100%);
+    color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 32px 14px 14px;
+    letter-spacing: -0.01em;
+  }
+
+  @media (max-width: 768px) {
+    .more-services-section { padding: 60px 20px; }
+    .more-services-preview { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--white);
+    border-top: 1px solid rgba(0,0,0,0.07);
+    padding: 56px 48px 40px;
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    max-width: 720px;
+    margin: 0 auto 40px;
+  }
+
+  .footer-col h4 {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--dark);
+    margin-bottom: 14px;
+    letter-spacing: -0.01em;
+  }
+
+  .footer-col ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .footer-col ul li a {
+    text-decoration: none;
+    font-size: 13px;
+    color: var(--mid);
+    transition: color 0.2s;
+  }
+  .footer-col ul li a:hover { color: var(--dark); }
+
+  .footer-bottom {
+    text-align: center;
+    font-size: 12px;
+    color: var(--light);
+    padding-top: 24px;
+    border-top: 1px solid rgba(0,0,0,0.06);
+    max-width: 960px;
+    margin: 0 auto;
+  }
+
+  .inline-contact {
+    max-width: 480px;
+    margin: 0 auto;
+    text-align: left;
+  }
+
+  /* ── CONTACT ── */
+  .contact-section {
+    padding: 80px 40px;
+    background: var(--bg);
+    text-align: center;
+  }
+
+  .contact-inner {
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: left;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .form-group label {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--mid);
+  }
+
+  .optional {
+    font-weight: 400;
+    color: var(--light);
+  }
+
+  .contact-form input[type="email"],
+  .contact-form textarea {
+    width: 100%;
+    background: #eeede9;
+    border: none;
+    border-radius: 12px;
+    padding: 14px 16px;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    color: var(--dark);
+    outline: none;
+    transition: background 0.2s;
+    resize: none;
+  }
+
+  .contact-form input[type="email"]::placeholder,
+  .contact-form textarea::placeholder {
+    color: var(--light);
+  }
+
+  .contact-form input[type="email"]:focus,
+  .contact-form textarea:focus {
+    background: #e5e4e0;
+  }
+
+  .package-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .package-option {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #eeede9;
+    border-radius: 12px;
+    padding: 14px 16px;
+    cursor: pointer;
+    font-size: 15px;
+    color: var(--dark);
+    transition: background 0.2s;
+  }
+
+  .package-option:hover { background: #e5e4e0; }
+
+  .package-option input[type="radio"] {
+    accent-color: var(--dark);
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+    cursor: pointer;
+  }
+
+  .package-option:has(input:checked) {
+    background: var(--dark);
+    color: #fff;
+  }
+
+  .file-upload-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #eeede9;
+    border-radius: 12px;
+    padding: 14px 16px;
+    font-size: 15px;
+    color: var(--mid);
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+
+  .file-upload-label:hover { background: #e5e4e0; }
+
+  .contact-btn {
+    width: 100%;
+    background: var(--dark);
+    color: #fff;
+    border: none;
+    border-radius: 100px;
+    padding: 16px;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.15s;
+    margin-top: 8px;
+  }
+
+  .contact-btn:hover { background: #333; transform: translateY(-2px); }
+
+  @media (max-width: 768px) {
+    .contact-section { padding: 60px 20px; }
+  }
+
+  /* ── TESTIMONIALS ── */
+  .testimonials-section {
+    padding: 80px 40px;
+    background: var(--white);
+  }
+
+  .testimonials-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .testimonial-card {
+    background: var(--bg);
+    border-radius: 16px;
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .testimonial-stars {
+    color: #f5a623;
+    font-size: 16px;
+    letter-spacing: 2px;
+  }
+
+  .testimonial-text {
+    font-size: 15px;
+    color: var(--mid);
+    line-height: 1.7;
+    flex: 1;
+  }
+
+  .testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-top: 16px;
+    border-top: 1px solid rgba(0,0,0,0.07);
+  }
+
+  .testimonial-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--light);
+    color: var(--dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+
+  .testimonial-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--dark);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .repeat-badge {
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--mid);
+    background: rgba(0,0,0,0.06);
+    padding: 2px 8px;
+    border-radius: 100px;
+  }
+
+  .testimonial-location {
+    font-size: 12px;
+    color: var(--light);
+    margin-top: 2px;
+  }
+
+  @media (max-width: 768px) {
+    .testimonials-section { padding: 60px 20px; }
+    .testimonials-grid { grid-template-columns: 1fr !important; }
+    .testimonial-card { grid-column: span 1 !important; }
+  }
+
+  .os-masonry {
+    columns: 3;
+    column-gap: 8px;
+  }
+
+  .os-masonry .os-cell {
+    break-inside: avoid;
+    margin-bottom: 8px;
+    border-radius: 14px;
+    overflow: hidden;
+  }
+
+  .os-masonry .os-cell img {
+    width: 100%;
+    display: block;
+    transition: transform 0.4s ease;
+  }
+
+  .os-masonry .os-cell img:hover { transform: scale(1.03); }
+
+  @media (max-width: 768px) {
+    .os-masonry { columns: 2; }
+  }
+
+  /* ── OTHER SERVICES PAGE ── */
+  .os-hero {
+    padding: 72px 40px 0;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .os-section {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 64px 40px;
+  }
+
+  .os-section-header {
+    margin-bottom: 32px;
+  }
+
+  .os-collage {
+    display: grid;
+    gap: 8px;
+  }
+
+  .os-collage-3 {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 280px;
+  }
+
+  .os-collage-2 {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 220px 220px;
+  }
+
+  .os-cell {
+    border-radius: 14px;
+    overflow: hidden;
+  }
+
+  .os-cell-tall {
+    grid-row: span 1;
+  }
+
+  .os-collage-2 .os-cell-wide {
+    grid-column: span 2;
+  }
+
+  .os-cell img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+  }
+
+  .os-cell img:hover { transform: scale(1.03); }
+
+  @media (max-width: 768px) {
+    .os-collage-3, .os-collage-2 { grid-template-columns: 1fr; grid-template-rows: auto; }
+    .os-cell, .os-cell-wide, .os-cell-tall { grid-column: span 1; grid-row: span 1; }
+    .os-cell { aspect-ratio: 16/9; }
+    .os-section { padding: 40px 20px; }
+  }
+
+  /* ── DIVIDER ── */
+  .section-divider {
+    height: 1px;
+    background: rgba(0,0,0,0.07);
+    margin: 0 40px;
+  }
+
+  /* ── FADE IN ANIMATION ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .fade-up {
+    animation: fadeUp 0.7s ease both;
+  }
+
+  .fade-up-1 { animation-delay: 0.1s; }
+  .fade-up-2 { animation-delay: 0.2s; }
+  .fade-up-3 { animation-delay: 0.35s; }
+  .fade-up-4 { animation-delay: 0.5s; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 768px) {
+    nav { padding: 0 16px; }
+    .nav-links { gap: 0; }
+    .nav-desktop-only { display: none; }
+    .section { padding: 60px 20px; }
+    .planning-section { margin: 0 16px; padding: 40px 24px; }
+    .gallery-section { padding: 0 16px 60px; }
+    .steps-grid { grid-template-columns: 1fr; }
+    .gallery-masonry { columns: 2; }
+    .footer-grid { grid-template-columns: repeat(2, 1fr); }
+    footer { padding: 40px 24px 28px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo"><img src="images/img_001.png" alt="Planning and Visuals by TE-OH logo" class="nav-logo-img"/><span class="logo-full">Planning and Visuals by TE-OH</span><span class="logo-short">by TE-OH</span></a>
+  <ul class="nav-links">
+    <li class="nav-desktop-only"><a href="#renders">Renders</a></li>
+    <li class="nav-desktop-only"><a href="#planning">Planning</a></li>
+    <li><a href="#" onclick="showPage('other'); return false;">Other Services</a></li>
+  </ul>
+  <a href="#get-a-quote" class="nav-cta" onclick="showPage('main'); return false;" id="nav-cta-btn">Get a Quote</a>
+</nav>
+
+<!-- MAIN PAGE -->
+<div id="main-page">
+
+<!-- HERO -->
+<section class="hero">
+  <h1 class="fade-up fade-up-1">Garden Room Renders &amp; Planning<br>Permission Packs</h1>
+  <p class="subheadline fade-up fade-up-2">Stand out in proposals and win more clients.</p>
+  <div class="hero-image-wrap fade-up fade-up-3">
+    <!-- Placeholder: replace src with your hero image -->
+    <img src="images/img_002.png" alt="Garden room render example" />
+  </div>
+
+</section>
+
+<div class="section-divider"></div>
+
+<!-- RENDERS SECTION -->
+<section id="renders" class="section">
+  <p class="section-label">3D Renders</p>
+  <h2 class="section-title">Photorealistic Renders<br>that sell the vision.</h2>
+  <p class="section-sub">Exterior views, interior shots, and bird's-eye floor plans, all in one package.</p>
+
+  <div class="render-two-up">
+    <img src="images/img_003.jpg" alt="Garden room exterior render" style="aspect-ratio:16/7; object-fit:cover;"/>
+    <img src="images/img_004.jpg" alt="Garden room floor plan render" style="aspect-ratio:16/7; object-fit:cover;"/>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- PLANNING SECTION -->
+<section id="planning">
+  <div class="planning-section">
+    <p class="section-label">Planning Permission</p>
+    <h2 class="section-title">Planning Permission<br>Drawings.</h2>
+    <p class="section-sub">Technical drawings ready for UK council approval.</p>
+
+    <div class="planning-drawing">
+      <img src="images/img_005.jpg" alt="Planning permission drawings" />
+    </div>
+
+    <div class="elevations-grid" style="margin-top:12px; display:grid; grid-template-columns:1fr 1fr; gap:4px; border-radius:12px; overflow:hidden; border:1px solid rgba(0,0,0,0.08);">
+      <img src="images/img_006.jpg" alt="Front Elevation" style="width:100%; display:block;"/>
+      <img src="images/img_007.jpg" alt="Rear Elevation" style="width:100%; display:block;"/>
+      <img src="images/img_008.jpg" alt="Left Elevation" style="width:100%; display:block;"/>
+      <img src="images/img_009.jpg" alt="Right Elevation" style="width:100%; display:block;"/>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how-section" id="get-a-quote">
+  <p class="section-label">Process</p>
+  <h2 class="section-title">How to Get Started</h2>
+  <p class="section-sub">A streamlined process that makes it easy to bring your garden room vision to life</p>
+
+  <div class="steps-grid">
+    <div class="step-card">
+      <div class="step-img-wrap">
+        <img src="images/img_010.png" alt="Share your sketch" />
+        <span class="step-number">01</span>
+      </div>
+      <h3>Share Your Sketch</h3>
+      <p>Share your hand-drawn sketches or rough plans of your garden room. Don't worry about perfection, I just need to understand your vision and dimensions.</p>
+    </div>
+    <div class="step-card">
+      <div class="step-img-wrap">
+        <img src="images/img_011.png" alt="Review the draft" />
+        <span class="step-number">02</span>
+      </div>
+      <h3>Review the Draft</h3>
+      <p>I'll create an initial 3D model based on your specifications. Together, we'll review and refine every detail until it matches your exact requirements.</p>
+    </div>
+    <div class="step-card">
+      <div class="step-img-wrap">
+        <img src="images/img_012.png" alt="Receive your renders" />
+        <span class="step-number">03</span>
+      </div>
+      <h3>Receive Your Renders and Planning Permission Drawings</h3>
+      <p>Get stunning photorealistic visualizations of your garden room, delivered digitally. Perfect for planning approvals, stakeholder presentations, or bringing your vision to life.</p>
+    </div>
+  </div>
+
+  <div class="inline-contact">
+    <form class="contact-form" action="https://formspree.io/f/xaqkzpbv" method="POST" enctype="multipart/form-data">
+      <input type="hidden" name="_subject" value="New enquiry from Planning and Visuals by TE-OH" />
+      <div class="form-group">
+        <label for="email-inline">Email</label>
+        <input type="email" id="email-inline" name="email" placeholder="john@example.com" required />
+      </div>
+      <div class="form-group">
+        <label>Package</label>
+        <div class="package-options">
+          <label class="package-option">
+            <input type="radio" name="package" value="Photorealistic Renders" />
+            <span>Photorealistic Renders</span>
+          </label>
+          <label class="package-option">
+            <input type="radio" name="package" value="Planning Permission Drawings" />
+            <span>Planning Permission Drawings</span>
+          </label>
+          <label class="package-option">
+            <input type="radio" name="package" value="Both" />
+            <span>Both</span>
+          </label>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="message-inline">Message</label>
+        <textarea id="message-inline" name="message" placeholder="Your message..." rows="5" required></textarea>
+      </div>
+      <div class="form-group">
+        <label for="attachment-inline">Attach Floor Plan Sketch <span class="optional">(optional)</span></label>
+        <label class="file-upload-label" for="attachment-inline">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+          <span id="file-label-inline">Attach files</span>
+        </label>
+        <input type="file" id="attachment-inline" name="attachment" accept="image/*,.pdf" multiple style="display:none;" onchange="
+          const files = this.files;
+          if (files.length === 0) {
+            document.getElementById('file-label-inline').textContent = 'Attach files';
+            document.getElementById('file-size-warning').style.display = 'none';
+            return;
+          }
+          const totalMB = Array.from(files).reduce((sum, f) => sum + f.size, 0) / 1024 / 1024;
+          document.getElementById('file-label-inline').textContent = files.length === 1 ? files[0].name : files.length + ' files selected';
+          const warning = document.getElementById('file-size-warning');
+          if (totalMB > 5) {
+            warning.textContent = 'Total file size is ' + totalMB.toFixed(1) + 'MB — please keep attachments under 5MB total.';
+            warning.style.color = '#c0392b';
+            warning.style.display = 'block';
+          } else {
+            warning.textContent = totalMB.toFixed(1) + 'MB of 5MB used.';
+            warning.style.color = 'var(--light)';
+            warning.style.display = 'block';
+          }
+        " />
+        <span id="file-size-warning" style="display:none; font-size:13px; margin-top:6px;"></span>
+        <span style="font-size:12px; color:var(--light); margin-top:4px; display:block;">Maximum 5MB total across all files.</span>
+      </div>
+      <button type="submit" class="contact-btn">Send Message</button>
+    </form>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- PORTFOLIO GALLERY -->
+<div class="gallery-section" id="portfolio">
+  <div style="max-width:1100px; margin:0 auto 28px;">
+    <p class="section-label">Portfolio</p>
+    <h2 class="section-title">Recent Projects</h2>
+  </div>
+  <div style="max-width:1100px; margin:0 auto;">
+    <div class="gallery-masonry">
+      <div class="gallery-cell"><img src="images/img_013.png" alt="Garden room project 1"/></div>
+      <div class="gallery-cell"><img src="images/img_014.jpg" alt="Garden room project 2"/></div>
+      <div class="gallery-cell"><img src="images/img_015.jpg" alt="Garden room project 3"/></div>
+      <div class="gallery-cell"><img src="images/img_016.jpg" alt="Garden room project 4"/></div>
+      <div class="gallery-cell"><img src="images/img_017.png" alt="Garden room project 5"/></div>
+      <div class="gallery-cell"><img src="images/img_018.jpg" alt="Garden room project 6"/></div>
+</div>
+  </div>
+</div>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials-section" id="testimonials">
+  <div class="testimonials-inner">
+    <h2 class="section-title" style="text-align:center; margin-bottom:48px;">Client Reviews</h2>
+
+    <div class="testimonials-grid">
+
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">Exceptional work, remarkable creativity and attention to detail. Proactive communication made collaboration effortless. Highly recommend!</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar" style="background:#e0d5c5;">H</div>
+          <div>
+            <div class="testimonial-name">Horizon Garden Studios <span class="repeat-badge">↻ Repeat Client</span></div>
+            <div class="testimonial-location">🇬🇧 United Kingdom</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">Andrew was great to work with and the product he delivered is outstanding!</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar" style="background:#1a3a5c; color:#fff;">S</div>
+          <div>
+            <div class="testimonial-name">SGL Rooms</div>
+            <div class="testimonial-location">🇬🇧 United Kingdom</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">We missed a detail but when we noticed Andrew hoped in and took care of it quickly.</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar" style="background:#c5d5e0;">E</div>
+          <div>
+            <div class="testimonial-name">Elmwood Garden Studios <span class="repeat-badge">↻ Repeat Client</span></div>
+            <div class="testimonial-location">🇬🇧 United Kingdom</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- MORE SERVICES CTA -->
+<section class="more-services-section">
+  <div class="more-services-inner">
+    <p class="section-label" style="text-align:center;">Beyond Garden Rooms</p>
+    <h2 class="section-title" style="text-align:center; margin-bottom:16px;">More Services</h2>
+    <p style="text-align:center; color:var(--light); font-size:17px; font-weight:500; margin-bottom:36px;">Yacht Design, Draughtsman Drawings, Residential &amp; Furniture Design</p>
+    <div style="text-align:center; margin-bottom:48px;">
+      <a href="#" class="cta-btn" onclick="showPage('other'); return false;">Explore More Services &rarr;</a>
+    </div>
+    <div class="more-services-preview">
+      <div class="ms-preview-cell" onclick="showPage('other')">
+        <img src="images/img_019.png" alt="Yacht Design" />
+        <div class="ms-preview-label">Yacht Design</div>
+      </div>
+      <div class="ms-preview-cell" onclick="showPage('other')">
+        <img src="images/img_025.jpg" alt="Draughtsman Drawings" />
+        <div class="ms-preview-label">Draughtsman Drawings</div>
+      </div>
+      <div class="ms-preview-cell" onclick="showPage('other')">
+        <img src="images/img_027.jpg" alt="Residential Design" />
+        <div class="ms-preview-label">Residential Design</div>
+      </div>
+      <div class="ms-preview-cell" onclick="showPage('other')">
+        <img src="images/img_030.jpg" alt="Furniture Design" />
+        <div class="ms-preview-label">Furniture Design</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="contact">
+  <div class="footer-grid">
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="#renders">Renders</a></li>
+        <li><a href="#planning">Planning</a></li>
+        <li><a href="#" onclick="showPage('other'); return false;">Other Services</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>About</h4>
+      <ul>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Get in Touch</h4>
+      <ul>
+        <li><a href="https://www.linkedin.com/in/andrewteohdesigns/" target="_blank">LinkedIn</a></li>
+        <li><a href="mailto:by.teoh.studios@gmail.com">Email</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    © 2025 Planning and Visuals by TE-OH. All rights reserved.
+  </div>
+</footer>
+
+</div><!-- END MAIN PAGE -->
+
+<!-- OTHER SERVICES PAGE -->
+<div id="other-services-page" style="display:none;">
+
+  <div class="os-hero">
+    <h1 class="section-title" style="font-size:clamp(32px,5vw,56px); text-align:center; margin-bottom:12px;">Other Services</h1>
+    <p class="section-sub" style="text-align:center; margin:0 auto 64px;">Yacht Design, Draughtsman Drawings, Residential & Furniture Design</p>
+  </div>
+
+  <!-- YACHT DESIGN -->
+  <div class="os-section">
+    <div class="os-section-header">
+      <h2 class="section-title">Yacht Design</h2>
+      
+    </div>
+    <div class="os-masonry">
+      <div class="os-cell"><img src="images/img_019.png" alt="Yacht design 1"/></div>
+      <div class="os-cell"><img src="images/img_020.png" alt="Yacht design 2"/></div>
+      <div class="os-cell"><img src="images/img_021.png" alt="Yacht design 3"/></div>
+      <div class="os-cell"><img src="images/img_022.jpg" alt="Yacht design 4"/></div>
+      <div class="os-cell"><img src="images/img_023.jpg" alt="Yacht design 5"/></div>
+      <div class="os-cell"><img src="images/img_024.jpg" alt="Yacht design 6"/></div>
+    </div>
+  </div>
+
+  <!-- DRAUGHTSMAN DRAWINGS -->
+  <div class="os-section">
+    <div class="os-section-header">
+      <h2 class="section-title">Draughtsman Drawings</h2>
+      
+    </div>
+    <div class="os-masonry">
+      <div class="os-cell"><img src="images/img_025.jpg" alt="Draughtsman drawings 1"/></div>
+      <div class="os-cell"><img src="images/img_026.jpg" alt="Draughtsman drawings 2"/></div>
+    </div>
+  </div>
+
+  <!-- RESIDENTIAL DESIGN -->
+  <div class="os-section">
+    <div class="os-section-header">
+      <h2 class="section-title">Residential Design</h2>
+      
+    </div>
+    <div class="os-masonry">
+      <div class="os-cell"><img src="images/img_027.jpg" alt="Residential design 1"/></div>
+      <div class="os-cell"><img src="images/img_028.jpg" alt="Residential design 2"/></div>
+      <div class="os-cell"><img src="images/img_029.jpg" alt="Residential design 3"/></div>
+    </div>
+  </div>
+
+    <!-- FURNITURE DESIGN -->
+  <div class="os-section">
+    <div class="os-section-header">
+      <h2 class="section-title">Furniture Design</h2>
+      
+    </div>
+    <div class="os-masonry">
+      <div class="os-cell"><img src="images/img_030.jpg" alt="Furniture design 1"/></div>
+<div class="os-cell"><img src="images/img_031.jpg" alt="Furniture design 2"/></div>
+      <div class="os-cell"><img src="images/img_032.jpg" alt="Furniture design 3"/></div>
+      <div class="os-cell"><img src="images/img_033.jpg" alt="Furniture design 4"/></div>
+      <div class="os-cell"><img src="images/img_034.jpg" alt="Furniture design 5"/></div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div style="text-align:center; padding: 64px 40px;">
+    <h2 class="section-title" style="margin-bottom:16px;">Interested in a project?</h2>
+    <p class="section-sub" style="margin:0 auto 32px;">Get in touch today via by.teoh.studios@gmail.com</p>
+    <a href="mailto:by.teoh.studios@gmail.com" class="cta-btn">Email</a>
+  </div>
+
+  <!-- FOOTER -->
+  <footer style="background:var(--white); border-top:1px solid rgba(0,0,0,0.07); padding:32px 48px; text-align:center;">
+    <p style="font-size:12px; color:var(--light);">© 2025 Planning and Visuals by TE-OH. All rights reserved.</p>
+  </footer>
+
+</div>
+
+<script>
+  function showPage(page) {
+    const main = document.getElementById('main-page');
+    const other = document.getElementById('other-services-page');
+    const cta = document.getElementById('nav-cta-btn');
+
+    if (page === 'other') {
+      main.style.display = 'none';
+      other.style.display = 'block';
+      cta.textContent = '← Back';
+      cta.onclick = function() { showPage('main'); return false; };
+      cta.href = '#';
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      main.style.display = 'block';
+      other.style.display = 'none';
+      cta.textContent = 'Get a Quote';
+      cta.onclick = null;
+      cta.href = '#get-a-quote';
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  }
+</script>
+
+<!-- LIGHTBOX -->
+<div id="lightbox" style="display:none;" onclick="closeLightbox()">
+  <div class="lb-overlay"></div>
+  <div class="lb-content">
+    <button class="lb-close" onclick="closeLightbox()">✕</button>
+    <img id="lb-img" src="" alt=""/>
+  </div>
+</div>
+
+<style>
+  #lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+  }
+
+  .lb-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.85);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+  }
+
+  .lb-content {
+    position: relative;
+    z-index: 1001;
+    max-width: 90vw;
+    max-height: 90vh;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 32px 80px rgba(0,0,0,0.5);
+    animation: lbFadeIn 0.2s ease;
+  }
+
+  @keyframes lbFadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to   { opacity: 1; transform: scale(1); }
+  }
+
+  #lb-img {
+    display: block;
+    max-width: 90vw;
+    max-height: 88vh;
+    object-fit: contain;
+    border-radius: 16px;
+  }
+
+  .lb-close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: rgba(0,0,0,0.5);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+    z-index: 1002;
+  }
+
+  .lb-close:hover { background: rgba(0,0,0,0.8); }
+
+  .lb-trigger { cursor: zoom-in; }
+</style>
+
+<script>
+  function openLightbox(src) {
+    const lb = document.getElementById('lightbox');
+    const img = document.getElementById('lb-img');
+    img.src = src;
+    lb.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLightbox() {
+    document.getElementById('lightbox').style.display = 'none';
+    document.getElementById('lb-img').src = '';
+    document.body.style.overflow = '';
+  }
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeLightbox();
+  });
+
+  // Attach lightbox to all gallery and portfolio images
+  document.addEventListener('DOMContentLoaded', function() {
+    const selectors = [
+      '.gallery-cell img',
+      '.os-cell img'
+    ];
+    selectors.forEach(function(sel) {
+      document.querySelectorAll(sel).forEach(function(img) {
+        img.classList.add('lb-trigger');
+        img.addEventListener('click', function(e) {
+          e.stopPropagation();
+          openLightbox(this.src);
+        });
+      });
+    });
+  });
+</script>
+
+</body>
+</html>
